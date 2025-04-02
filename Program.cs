@@ -12,6 +12,16 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll",
+        policy =>
+        {
+            policy.AllowAnyOrigin()  // Permitir apenas a origem do React
+                  .AllowAnyMethod()  // Permitir todos os métodos (GET, POST, PUT, DELETE)
+                  .AllowAnyHeader(); // Permitir todos os cabeçalhos
+        });
+});
 
 var app = builder.Build();
 
