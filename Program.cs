@@ -1,3 +1,6 @@
+using APIPET.Model;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<Contexto>(options =>
