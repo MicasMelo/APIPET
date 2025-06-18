@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace APIPET.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20250402040424_Inicial")]
+    [Migration("20250618131822_Inicial")]
     partial class Inicial
     {
         /// <inheritdoc />
